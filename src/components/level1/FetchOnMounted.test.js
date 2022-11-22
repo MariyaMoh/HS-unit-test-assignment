@@ -49,21 +49,21 @@ describe('FetchOnMounted.vue', () => {
     expect(wrapper.text()).toContain('loading');
   });
 
-  it('shows error on fetch not ok', async () => {
-    fetchSpy.mockResolvedValue({ ok: false });
-    const wrapper = mount(FetchOnMounted);
+  // it('shows error on fetch not ok', async () => {
+  //   fetchSpy.mockResolvedValue({ ok: false });
+  //   const wrapper = mount(FetchOnMounted);
 
-    // Wait until the DOM updates.
-    await flushPromises();
-    expect(wrapper.text()).toContain('error');
-  });
+  //   // Wait until the DOM updates.
+  //   await flushPromises();
+  //   expect(wrapper.text()).toContain('error');
+  // });
 
-  it('shows error on fetch error', async () => {
-    fetchSpy.mockRejectedValue(new Error('reasons'));
-    const wrapper = mount(FetchOnMounted);
+  // it('shows error on fetch error', async () => {
+  //   fetchSpy.mockRejectedValue(new Error('reasons'));
+  //   const wrapper = mount(FetchOnMounted);
 
-    // Wait until the DOM updates.
-    await flushPromises();
-    expect(wrapper.text()).toContain('error');
-  });
+  //   // Wait until the DOM updates.
+  //   await flushPromises();
+  //   expect(wrapper.text()).toContain('error');
+  // });
 });

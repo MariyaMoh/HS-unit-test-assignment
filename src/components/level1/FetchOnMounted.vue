@@ -7,7 +7,10 @@ const response = ref({});
 
 onMounted(async () => {
   const res = await fetch('https://yesno.wtf/api');
+  response.value = (await res?.json()) || {};
 });
 </script>
 
-<template></template>
+<template>
+  <img :src="response.image" alt="an image" />
+</template>
