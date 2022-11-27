@@ -4,8 +4,8 @@ import { ref } from 'vue';
 import dataService from './utils/dataService';
 
 const movies = dataService.getMovies();
-
-function setFavoriteMovie() {}
+const favoriteMovieId = ref('');
+function setFavoriteMovie(movieId) {}
 const favoriteMovie = ref('');
 </script>
 <template>
